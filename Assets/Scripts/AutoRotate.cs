@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AutoRotate : MonoBehaviour
 {
+    
+    [Range(0, 100)]
+    public float speed = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +23,6 @@ public class AutoRotate : MonoBehaviour
         // this.transform.localPosition = Vector3.right * 0.1f;
         
         this.transform.Rotate(Vector3.up * 10f);
+        // this.transform.Rotate(Vector3.up, this.speed, );
     }
 }
